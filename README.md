@@ -1,2 +1,2 @@
 # algorithms
-Repository to hold some algorithms written in python
+Repository to hold some algorithms written in Python

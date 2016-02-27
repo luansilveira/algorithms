@@ -1,17 +1,23 @@
 # -*- coding: utf-8 -*-
 
 if __name__ == '__main__':
-    n = int(input('n'))
+    n = int(input(''))
 
     for i in range(n):
         L = []
         counter = 0
-        crypt = input('input')
+        crypt = input('')
         C = []
         for c in crypt:
 
             try:
-                L.append(C.index(c))
+                index = C.index(c)
+                if index == 0:
+                    L.append(1)
+                elif index == 1:
+                    L.append(0)
+                else:
+                    L.append(index)
             except ValueError:
                 C.append(c)
                 if counter == 0:
@@ -22,14 +28,13 @@ if __name__ == '__main__':
                     L.append(counter)
                 counter += 1
 
-        print(L)
-        print(C)
-        print(counter)
         value = 0
-        for index, i in enumerate(reversed(L)):
-            value += i*(counter**index)
+        base = max(counter, 2)
+        for index, j in enumerate(reversed(L)):
+            value += j*(base**index)
 
-        print(value)
+        string = 'Case #' + str(i+1) + ': ' + str(value)
+        print(string)
 
 
 

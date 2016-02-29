@@ -6,7 +6,7 @@ class Order(Enum):
     dsc = 1
 
 
-def insertion_sort(array=[], order=Order(0)):
+def insertion_sort(array, order=Order(0)):
     if order == Order.asc:
         for j in range(1, len(array)):
             key = array[j]
